@@ -6,7 +6,7 @@ let datos = [];
 const lecturacsv4 = async(file) => {
     //let vector = [];
     const g = fs.createReadStream(file)
-        .on("error", (err) => console.log('Erro en el path'.red)) // Abrir archivo
+        .on("error", (err) => console.log('Error en el path'.red)) // Abrir archivo
         .pipe(csv({ cast: true, delimiter: ';' }))
     for await (const row of g) {
         //console.log(g.length);
