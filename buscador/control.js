@@ -36,16 +36,16 @@ let resultados = async(file, country, year) => {
 
 const validar = async(country, year) => {
     if (!Number(year)) {
-        throw new Error(`año ${year} invalido`)
+        throw new Error(`año ${year} invalido`.red)
     }
     let i = 0;
     if (year < 1960 || year > 2019)
-        throw new Error('Año no Encontrado')
+        throw new Error('Año no Encontrado'.red)
     for (i = 4; i < datos.length; i++) {
         if (country === datos[i][1]) { break; }
     }
     if (i == datos.length)
-        throw new Error('Codigo de Pais no encontrado')
+        throw new Error('Codigo de Pais no encontrado'.red)
 
 }
 const calcula = async(pais, anio, datos) => {
