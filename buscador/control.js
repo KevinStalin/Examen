@@ -61,15 +61,15 @@ const calcula = async(pais, anio, datos) => {
     }
     men = ''
     men += `Datos : Personas que usan Internet (${datos[i][2]})`
-    men += `\nPaís  : ${datos[i][0].magenta}`
-    men += `\nAño   : ${anio.toString().cyan}`
-    men += `\nValor : ${datos[i][j].green}`
-        /*
-        console.log(`Datos : Personas que usan Internet (${datos[i][2]})`);
-        console.log(`País  : ${pais}`);
-        console.log(`Año   : ${anio}`);
-        console.log(`Valor : ${Number(datos[i][j])}`);
-        */
+    men += `\nPaís  : ${datos[i][0]}`
+    men += `\nAño   : ${anio.toString()}`
+    men += `\nValor : ${datos[i][j]}`
+
+    console.log(`Datos : Personas que usan Internet (${datos[i][2]})`);
+    console.log(`País  : ${datos[i][0].magenta}`);
+    console.log(`Año   : ${anio.toString().cyan}`);
+    console.log(`Valor : ${datos[i][j].green}`);
+
     return men;
 };
 
