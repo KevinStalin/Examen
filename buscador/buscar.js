@@ -11,11 +11,14 @@ const guardar = (file, country, year) => {
 };
 
 const escribirarchivo = async(pais, anio, data) => {
-    //let data = JSON.stringify(vect);
+
+    if (!fs.existsSync('resultados')) {
+        fs.mkdirSync('resultados');
+    }
     fs.writeFile(`./resultados/${pais}-${anio}.txt`, data, (err) => {
         if (err) throw new Error("No se pudo grabar", err);
     });
-    return `Archivo guardado exitosamente `
+    return `Archivo guardado exitosamente : resultados/${pais}-${anio}.txt`
 };
 
 module.exports = {
